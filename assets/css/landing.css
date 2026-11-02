@@ -1,0 +1,17 @@
+/* Q2D Landing page (landing.html) */
+html { scroll-behavior: smooth; }
+body{margin:0;background:#DDE4EA;-webkit-font-smoothing:antialiased}
+a{color:#0B0F14}a:hover{color:#2D5BFF}
+@keyframes q2dmarquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes q2dpulse{0%,100%{opacity:.35}50%{opacity:1}}
+.q2d-marquee{animation:q2dmarquee 28s linear infinite}
+.q2d-dot{animation:q2dpulse 2.4s ease-in-out infinite}
+.q2d-card{transition:transform .18s ease-out, box-shadow .25s ease}
+.q2d-card:hover{box-shadow:0 30px 60px -30px rgba(11,15,20,.45)}
+.q2d-btn{transition:background .2s, color .2s, transform .2s}
+.q2d-btn:hover{transform:translateY(-2px)}
+@media (hover:none){.q2d-cursor{display:none}}
+.q2d-card, .q2d-parallax { will-change: transform; }
+@media (prefers-reduced-motion: reduce) {
+  .q2d-marquee, .q2d-dot { animation: none; }
+}
