@@ -36,6 +36,16 @@
     a.addEventListener('click', function () { setMenu(false); });
   });
 
+  /* ---------- hero video: fade in once it can play ---------- */
+  var heroVideo = document.querySelector('[data-hero-video]');
+  if (heroVideo) {
+    var ready = function () { heroVideo.classList.add('is-ready'); };
+    if (heroVideo.readyState >= 3) ready();
+    heroVideo.addEventListener('playing', ready);
+    heroVideo.addEventListener('canplay', ready);
+    if (reduceMotion) { heroVideo.removeAttribute('autoplay'); heroVideo.pause(); }
+  }
+
   /* ---------- helpers ---------- */
   function set(name, value) { root.style.setProperty(name, value); }
   function progress(el) {

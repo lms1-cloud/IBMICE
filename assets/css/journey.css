@@ -500,3 +500,14 @@ a{color:#FFFFFF}a:hover{color:#6F94FF}
 :where(.nav, .hero) a { text-decoration: none; color: inherit; }
 .nav__burger { padding: 0; cursor: pointer; font: inherit; }
 .nav__sheet-cta { box-sizing: border-box; }
+
+/* Hero headline set from the video reference: heavy, uppercase */
+.hero__title--initiative {
+  margin-top: 0;
+  font-size: calc(clamp(2.2rem, 4.9vw, 4.6rem) * var(--scale));
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+.hero__lead--wide { max-width: 900px; }
